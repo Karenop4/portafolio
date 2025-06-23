@@ -27,6 +27,7 @@ export function Projects() {
     {
       titulo: "Portafolio Personal",
       descripcion: "Sitio web desarrollado con React, Tailwind y Shadcn/ui.",
+      web:"https://portafolio-mocha-eta.vercel.app/",
       link: "https://github.com/karen-dev/mi-portafolio"
     },
     {
