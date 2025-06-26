@@ -1,6 +1,6 @@
 import { Mail, Linkedin, Github, Instagram } from "lucide-react";
 
-export function Contact() {
+export default function Contact() {
   return (
     <section
         id="contacto"

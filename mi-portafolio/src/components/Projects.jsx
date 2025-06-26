@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function Projects() {
+export default function Projects() {
   const [imagenActiva, setImagenActiva] = useState(null);
 
   const proyectos = [

@@ -193,24 +193,6 @@ export default function About() {
             </motion.div>
           </Card>
 
-          {/* Pasatiempos */}
-          <Card className={`${cardStyles} col-span-1 row-span-1`}>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-orange-400">
-                <Zap className="text-orange-400" /> Pasatiempos
-              </h3>
-              <p className="text-sm">
-                Me encanta cocinar, descubrir recetas nuevas y hacer deporte. 
-                Disfruto mucho jugar básquet, me ayuda a mantenerme activa y motivada.
-              </p>
-            </motion.div>
-          </Card>
-
           {/* Habilidades */}
           <Card className={`${cardStyles} col-span-1 row-span-1`}>
             <motion.div
@@ -230,6 +212,24 @@ export default function About() {
                   </div>
                 ))}
               </div>
+            </motion.div>
+          </Card>
+
+          {/* Pasatiempos */}
+          <Card className={`${cardStyles} col-span-1 row-span-1`}>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-orange-400">
+                <Zap className="text-orange-400" /> Pasatiempos
+              </h3>
+              <p className="text-sm">
+                Me encanta cocinar, descubrir recetas nuevas y hacer deporte. 
+                Disfruto mucho jugar básquet, me ayuda a mantenerme activa y motivada.
+              </p>
             </motion.div>
           </Card>
         </div>

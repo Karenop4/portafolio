@@ -1,4 +1,4 @@
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-card text-muted-foreground border-t border-border py-6 text-center text-sm">
       <p>
