@@ -34,7 +34,7 @@ export default function Header() {
                 {/* Imagen frontal */}
                 <div className="absolute inset-0 backface-hidden">
                   <img
-                    src="/assets/1.jpg"
+                    src="/assets/profile.jpg"
                     alt="Karen Ortiz"
                     className="w-full h-full object-cover rounded-xl shadow-xl border-2 border-white/20"
                   />
