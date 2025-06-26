@@ -227,8 +227,7 @@ export default function About() {
                 <Zap className="text-orange-400" /> Pasatiempos
               </h3>
               <p className="text-sm">
-                Me encanta cocinar, descubrir recetas nuevas y hacer deporte. 
-                Disfruto mucho jugar básquet, me ayuda a mantenerme activa y motivada.
+               Disfruto cocinar y experimentar con nuevas recetas, así como mantenerme activa a través del deporte, en especial el baloncesto, un deporte que me motiva y fortalece. También siento una profunda admiración por el mundo automotriz: me atraen la precisión de su ingeniería, la elegancia del diseño y la pasión que despiertan. Para mí, cada vehículo representa una combinación única de arte y tecnología.
               </p>
             </motion.div>
           </Card>
