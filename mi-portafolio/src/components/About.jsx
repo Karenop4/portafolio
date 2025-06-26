@@ -26,11 +26,11 @@ export default function About() {
     { name: "SQL", icon: <Database className="text-indigo-600" size={20} /> },
     { name: "Angular", icon: <Zap className="text-red-600" size={20} /> },
     { name: "C", icon: <Code className="text-blue-600" size={20} /> },
-  { name: "Arduino", icon: <CircuitBoard className="text-red-400" size={20} /> },
+    { name: "Arduino", icon: <CircuitBoard className="text-red-400" size={20} /> },
   ];
 
   const cardStyles =
-    "p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:shadow-[0_8px_30px_rgba(124,_58,_237,_0.15)] transition-shadow";
+    "p-4 md:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:shadow-[0_8px_30px_rgba(124,_58,_237,_0.15)] transition-shadow";
 
   return (
     <section id="about" className="py-10 px-4 bg-gradient-to-b from-violet-900/20 to-indigo-900/20">
@@ -41,13 +41,26 @@ export default function About() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-purple-300">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-purple-300">
           Sobre mí
         </h2>
 
-        <div className="grid grid-cols-4 grid-rows-2 gap-3 auto-rows-[1fr]">
-          {/* Descripción - ocupa 2 columnas y 2 filas */}
-          <Card className={`${cardStyles} col-span-2 row-span-2 flex flex-col justify-center`}>
+        <div
+          className="
+            grid
+            grid-cols-1
+            md:grid-cols-4
+            grid-rows-auto
+            md:grid-rows-2
+            gap-3
+            auto-rows-auto
+            md:auto-rows-[1fr]
+          "
+        >
+          {/* Descripción */}
+          <Card
+            className={`${cardStyles} col-span-1 row-span-1 md:col-span-2 md:row-span-2 flex flex-col justify-center`}
+          >
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -106,6 +119,7 @@ export default function About() {
                   <p className="text-sm">Fullstack</p>
                 </div>
               </motion.div>
+
               <motion.div
                 className="flex items-center gap-3 p-4 bg-white/5 rounded-lg"
                 initial={{ opacity: 0, x: 20 }}
@@ -133,13 +147,11 @@ export default function About() {
                   <p className="text-sm italic">"Aprender, crecer y aportar con pasión."</p>
                 </div>
               </motion.div>
-
-
             </div>
           </Card>
 
           {/* Formación complementaria */}
-          <Card className={`${cardStyles} col-span-2`}>
+          <Card className={`${cardStyles} col-span-1 md:col-span-2`}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -155,7 +167,7 @@ export default function About() {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://www.credly.com/badges/22c45bd9-e216-4e3c-b6d0-2dced9a62a4a/linked_in?t=ss8u5s"  // reemplaza por el link real
+                  href="https://www.credly.com/badges/22c45bd9-e216-4e3c-b6d0-2dced9a62a4a/linked_in?t=ss8u5s"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -167,7 +179,7 @@ export default function About() {
                 </a>
 
                 <a
-                  href="https://www.credly.com/badges/2bbd9214-801c-4f81-bfa5-dec4de1709de/linked_in?t=ss8u3u"  // reemplaza por el link real
+                  href="https://www.credly.com/badges/2bbd9214-801c-4f81-bfa5-dec4de1709de/linked_in?t=ss8u3u"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -178,12 +190,11 @@ export default function About() {
                   />
                 </a>
               </div>
-
             </motion.div>
           </Card>
 
-          {/* Hobbies */}
-          <Card className={`${cardStyles} row-span-1`}>
+          {/* Pasatiempos */}
+          <Card className={`${cardStyles} col-span-1 row-span-1`}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -201,7 +212,7 @@ export default function About() {
           </Card>
 
           {/* Habilidades */}
-          <Card className={`${cardStyles} row-span-1`}>
+          <Card className={`${cardStyles} col-span-1 row-span-1`}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}

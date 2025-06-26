@@ -59,7 +59,7 @@ function App() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true }}
       >
         <About />
       </motion.div>
@@ -68,7 +68,7 @@ function App() {
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        viewport={{ once: true}}
       >
         <Projects />
       </motion.div>
@@ -77,7 +77,7 @@ function App() {
         initial={{ opacity: 0, rotateY: 90 }}
         whileInView={{ opacity: 1, rotateY: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true}}
+        viewport={{ once: true }}
       >
         <Contact />
       </motion.div>
