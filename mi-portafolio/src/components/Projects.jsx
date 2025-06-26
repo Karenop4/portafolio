@@ -19,16 +19,17 @@ export function Projects() {
       imagen: "/assets/gestion_tareas.png"
     },
     {
-      titulo: "Dashboard de Ventas",
-      descripcion: "Visualización de datos con Tableau y Oracle SQL.",
+      titulo: "Web Analytics Dashboard",
+      descripcion: "Un sistema integral de análisis y visualización de datos para aplicaciones web que permite monitorear KPIs clave como engagement, conversión y comportamiento de usuarios. En progreso...",
       link: "https://github.com/karen-dev/dashboard-ventas",
-      imagen: "/assets/dashboard-ventas.png"
+      imagen: "/assets/proceso.png"
     },
     {
       titulo: "Portafolio Personal",
       descripcion: "Sitio web desarrollado con React, Tailwind y Shadcn/ui.",
       web:"https://portafolio-mocha-eta.vercel.app/",
-      link: "https://github.com/karen-dev/mi-portafolio"
+      link: "https://github.com/karen-dev/mi-portafolio", 
+      imagen: "/assets/971.jpg"
     },
     {
       titulo: "App gestión de citas médicas",

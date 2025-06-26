@@ -1,21 +1,39 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Briefcase, School, Code, Rocket, Braces, Code2, Atom, CircuitBoard, Database, Layers, Zap } from "lucide-react";
+import {
+  Briefcase,
+  School,
+  Code,
+  Rocket,
+  Braces,
+  Code2,
+  Atom,
+  CircuitBoard,
+  Database,
+  Layers,
+  Zap,
+  Star,
+  Globe,
+  User,
+} from "lucide-react";
 
 export default function About() {
-
   const skills = [
     { name: "React", icon: <Atom className="text-cyan-400" size={20} /> },
     { name: "Python", icon: <CircuitBoard className="text-green-400" size={20} /> },
     { name: "Java", icon: <Code2 className="text-red-500" size={20} /> },
-    { name: "HTML/ CSS/ JavaScript", icon: <Layers className="text-orange-400" size={20} /> },
+    { name: "HTML/ CSS/ JavaScript", icon: <Layers className="text-orange-400" size={30} /> },
     { name: "SQL", icon: <Database className="text-indigo-600" size={20} /> },
     { name: "Angular", icon: <Zap className="text-red-600" size={20} /> },
+    { name: "C", icon: <Code className="text-blue-600" size={20} /> },
+  { name: "Arduino", icon: <CircuitBoard className="text-red-400" size={20} /> },
   ];
 
+  const cardStyles =
+    "p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:shadow-[0_8px_30px_rgba(124,_58,_237,_0.15)] transition-shadow";
 
   return (
-    <section id="about" className="py-20 px-4 bg-gradient-to-b from-violet-900/20 to-indigo-900/20">
+    <section id="about" className="py-10 px-4 bg-gradient-to-b from-violet-900/20 to-indigo-900/20">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,41 +41,45 @@ export default function About() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-300">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-purple-300">
           Sobre mí
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          {/* Columna izquierda - Descripción */}
-          <Card className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 hover:shadow-[0_8px_30px_rgba(124,_58,_237,_0.15)] transition-shadow">
-            <motion.p 
-              className="text-lg  mb-6 leading-relaxed"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+        <div className="grid grid-cols-4 grid-rows-2 gap-3 auto-rows-[1fr]">
+          {/* Descripción - ocupa 2 columnas y 2 filas */}
+          <Card className={`${cardStyles} col-span-2 row-span-2 flex flex-col justify-center`}>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Soy Karen Ortiz, estudiante apasionada de Ingeniería en Ciencias de la Computación 
-              en la Universidad Politécnica Salesiana. Mi enfoque combina la creatividad con 
-              habilidades técnicas sólidas para desarrollar soluciones innovadoras.
-            </motion.p>
-
-            <div className="grid grid-cols-2 gap-4">
-              <motion.div 
+              <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2 text-cyan-400">
+                <User className="text-cyan-400" size={24} />
+                Sobre mí
+              </h3>
+              <p className="text-base leading-relaxed mb-8">
+                Soy Karen Ortiz, estudiante de Ingeniería en Ciencias de la Computación en la Universidad Politécnica Salesiana. Me apasiona aprender tecnologías que conecten el mundo físico y digital.
+                <br />
+                Me considero curiosa, comprometida y con ganas de aportar soluciones que marquen la diferencia.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-2 gap-4 mb-3">
+              <motion.div
                 className="flex items-center gap-3 p-4 bg-white/5 rounded-lg"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <Briefcase className="text-cyan-400" size={24} />
+                <Briefcase className="text-cyan-600" size={24} />
                 <div>
-                  <h4 className="font-semibold ">Experiencia</h4>
-                  <p className="text-sm ">Actualmente en formación activa</p>
+                  <h4 className="font-semibold">Experiencia</h4>
+                  <p className="text-sm">En formación activa</p>
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-3 p-4 bg-white/5 rounded-lg"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -66,58 +88,138 @@ export default function About() {
               >
                 <School className="text-purple-400" size={24} />
                 <div>
-                  <h4 className="font-semibold ">Educación</h4>
-                  <p className="text-sm ">UPS</p>
+                  <h4 className="font-semibold">Educación</h4>
+                  <p className="text-sm">UPS</p>
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-3 p-4 bg-white/5 rounded-lg"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Code className="text-amber-400" size={24} />
-                <div>
-                  <h4 className="font-semibold ">Proyectos</h4>
-                  <p className="text-sm ">15+ completados</p>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                className="flex items-center gap-3 p-4 bg-white/5 rounded-lg"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 }}
                 viewport={{ once: true }}
               >
                 <Rocket className="text-pink-400" size={24} />
                 <div>
-                  <h4 className="font-semibold ">Metas</h4>
-                  <p className="text-sm ">IA & Fullstack</p>
+                  <h4 className="font-semibold">Metas</h4>
+                  <p className="text-sm">Fullstack</p>
                 </div>
               </motion.div>
+              <motion.div
+                className="flex items-center gap-3 p-4 bg-white/5 rounded-lg"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <Globe className="text-green-400" size={28} />
+                <div>
+                  <h4 className="font-semibold">Idiomas</h4>
+                  <p className="text-sm">Español (Nativo), Inglés (Intermedio)</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center gap-3 p-4 bg-white/5 rounded-lg col-span-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                viewport={{ once: true }}
+              >
+                <Star className="text-yellow-400" size={24} />
+                <div>
+                  <h4 className="font-semibold">Lema</h4>
+                  <p className="text-sm italic">"Aprender, crecer y aportar con pasión."</p>
+                </div>
+              </motion.div>
+
+
             </div>
           </Card>
 
-          {/* Columna derecha - Habilidades */}
-          <Card className="p-8 bg-white/5 backdrop-blur-sm border border-white/10">
-            <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <Code className="text-cyan-400" /> Mis Habilidades
-            </h3>
-            
-            <div className="grid grid-cols-2 gap-4">
-              {skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center gap-3 p-3 bg-white/5 rounded-lg"
+          {/* Formación complementaria */}
+          <Card className={`${cardStyles} col-span-2`}>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-semibold mt-2 mb-4 flex items-center gap-2 text-orange-400">
+                <Braces className="text-orange-400" /> Formación complementaria
+              </h3>
+              <p className="text-sm leading-relaxed  mb-8">
+                Cuento con <strong>certificaciones de Cisco en IoT y Mantenimiento de PCs</strong>.
+                Actualmente estoy inmersa en el mundo de los <strong>Sistemas Embebidos</strong>, expandiendo mis habilidades con entusiasmo.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.credly.com/badges/22c45bd9-e216-4e3c-b6d0-2dced9a62a4a/linked_in?t=ss8u5s"  // reemplaza por el link real
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {skill.icon}
-                  <span className="font-medium">{skill.name}</span>
-                </div>
-              ))}
-            </div>
+                  <img
+                    src="/assets/IoT.png"
+                    alt="IoT"
+                    className="w-20 h-20 rounded hover:scale-110 transition-transform"
+                  />
+                </a>
+
+                <a
+                  href="https://www.credly.com/badges/2bbd9214-801c-4f81-bfa5-dec4de1709de/linked_in?t=ss8u3u"  // reemplaza por el link real
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/chb.png"
+                    alt="Mantenimiento"
+                    className="w-20 h-20 rounded hover:scale-110 transition-transform"
+                  />
+                </a>
+              </div>
+
+            </motion.div>
+          </Card>
+
+          {/* Hobbies */}
+          <Card className={`${cardStyles} row-span-1`}>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-orange-400">
+                <Zap className="text-orange-400" /> Pasatiempos
+              </h3>
+              <p className="text-sm">
+                Me encanta cocinar, descubrir recetas nuevas y hacer deporte. 
+                Disfruto mucho jugar básquet, me ayuda a mantenerme activa y motivada.
+              </p>
+            </motion.div>
+          </Card>
+
+          {/* Habilidades */}
+          <Card className={`${cardStyles} row-span-1`}>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-cyan-400">
+                <Code className="text-cyan-400" /> Habilidades
+              </h3>
+              <div className="grid grid-cols-2 gap-2">
+                {skills.map((skill) => (
+                  <div key={skill.name} className="flex items-center gap-2 text-sm bg-white/5 p-2 rounded">
+                    {skill.icon}
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </Card>
         </div>
       </motion.div>
