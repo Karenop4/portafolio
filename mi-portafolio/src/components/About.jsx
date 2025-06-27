@@ -144,7 +144,7 @@ export default function About() {
                 <Star className="text-yellow-400" size={24} />
                 <div>
                   <h4 className="font-semibold">Lema</h4>
-                  <p className="text-sm italic">"Aprender, crecer y aportar con pasión."</p>
+                  <p className="text-sm italic">“No es la herramienta la que hace al ingeniero, sino la pasión por crear soluciones.”</p>
                 </div>
               </motion.div>
             </div>

@@ -73,7 +73,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                Estudiante de <span className="text-primary-200">Ing. Ciencias de la Computación</span>
+                Estudiante de <span className="text-primary-200">Ingeniería Ciencias de la Computación</span>
               </motion.p>
               
               <motion.div
@@ -92,8 +92,8 @@ export default function Header() {
                 <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                   <Button 
                     asChild
-                    variant="gradient"
-                    className="rounded-full px-8 py-6 text-lg"
+                    variant="outline"
+                    className="rounded-full px-8 py-6 text-lg border-white/100 hover:bg-white/10"
                   >
                     <motion.a
                       href="#contacto"
@@ -107,7 +107,7 @@ export default function Header() {
                   <Button 
                     onClick={() => window.location.href = "#projects"}
                     variant="outline" 
-                    className="rounded-full px-8 py-6 text-lg border-white/30 hover:bg-white/10"
+                    className="rounded-full px-8 py-6 text-lg border-white/100 hover:bg-white/10"
                   >
                     <motion.span
                       

@@ -9,6 +9,7 @@ export default function Projects() {
       titulo: "Juego de Lanzamiento de dados",
       descripcion: "Juego interactivo para dos jugadores que simula el lanzamiento de un dado, realizado con HTML, CSS y JavaScript.",
       link: "https://github.com/Karenop4/duelo-dados_-Encalada-Ortiz-.git",
+      web: "https://karenop4.github.io/duelo-dados_-Encalada-Ortiz-/",
       imagen: "/assets/duelo_dados.png" 
     },
     {
@@ -33,7 +34,7 @@ export default function Projects() {
     },
     {
       titulo: "App gestión de citas médicas",
-      descripcion: "Aplicación para agendar y gestionar citas médicas, realizado con Angular y Firebase. En desarrollo...",
+      descripcion: "Aplicación para agendar y gestionar citas médicas, realizado con Angular y Firebase. BackEnd con SpringBoot en desarrollo...",
       link: "https://github.com/Karenop4/Gestion-citas-medicas-Encalada-Ortiz.git",
       web: "https://citamedicas-encalada-ortiz.web.app/",
       imagen: "/assets/citas_medicas.png"
