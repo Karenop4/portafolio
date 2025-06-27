@@ -73,7 +73,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                Estudiante de <span className="text-primary-200">Ingeniería Ciencias de la Computación</span>
+                Estudiante de <span className="text-primary-200">Ingeniería en Ciencias de la Computación</span>
               </motion.p>
               
               <motion.div
