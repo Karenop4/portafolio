@@ -21,7 +21,7 @@ export default function Contact() {
         {/* Íconos + texto a la derecha */}
         <div className="flex flex-col gap-4">
           <a
-            href="mailto:karenorpe2004@gmail.com"
+            href="mailto:k.ortizp004@gmail.com"
             className="flex items-center gap-3 hover:text-primary transition"
           >
             <Mail size={24} />
@@ -53,6 +53,15 @@ export default function Contact() {
           >
             <Instagram size={24} />
             <span>Instagram</span>
+          </a>
+          <a
+            href="https://www.instagram.com/devlynk2025/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 hover:text-primary transition"
+          >
+            <Instagram size={24} />
+            <span>DevLynk - mi marca personal</span>
           </a>
         </div>
       </div>
