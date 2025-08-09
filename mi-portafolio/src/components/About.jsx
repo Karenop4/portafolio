@@ -35,7 +35,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-5 px-4 bg-gradient-to-b from-violet-900/20 to-indigo-900/20"
+      className="py-5 px-4 m-4 bg-gradient-to-b from-violet-900/20 to-indigo-900/20"
     >
       <motion.div
         initial={{ opacity: 0, y: 0 }}

@@ -55,13 +55,13 @@ export default function Contact() {
             <span>Instagram</span>
           </a>
           <a
-            href="https://www.instagram.com/devlynk2025/"
+            href="https://www.instagram.com/decodetech.ec/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 hover:text-primary transition"
           >
             <Instagram size={24} />
-            <span>DevLynk - mi marca personal</span>
+            <span>Decodetech - mi marca personal</span>
           </a>
         </div>
       </div>

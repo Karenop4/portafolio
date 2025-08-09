@@ -43,7 +43,7 @@ function App() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="w-full h-auto md:w-72 md:h-full md:fixed md:left-0 md:top-2 bg-secondary overflow-y-auto"
+          className="w-full h-auto md:w-72 md:h-auto md:fixed md:left-0 md:top-2 bg-secondary overflow-y-auto"
         >
           <Header />
         </m.div>
