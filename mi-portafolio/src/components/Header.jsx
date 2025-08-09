@@ -7,18 +7,18 @@ export default function Header() {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <header className=" pt-10 pb-10 bg-gradient-to-b from-background to-background/90 dark:from-background/90 dark:to-background/80">
+    <header className="p-2 bg-gradient-to-b from-background to-background/90 dark:from-background/90 dark:to-background/80">
       <motion.div
-        className="max-w-6xl mx-auto w-full px-4"
+        className="w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
         <Card className="bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl rounded-2xl overflow-hidden">
-          <CardContent className="flex flex-col lg:flex-row items-center gap-8 p-8 lg:p-12">
+          <CardContent className="flex flex-col items-center gap-5">
             {/* Contenedor de imagen con efecto 3D mejorado */}
             <motion.div
-              className="w-64 h-64 perspective-1000 cursor-pointer"
+              className="pt-2 w-60 h-60 perspective-1000 cursor-pointer"
               onMouseEnter={() => setFlipped(true)}
               onMouseLeave={() => setFlipped(false)}
               whileHover={{ scale: 1.03 }}
@@ -54,7 +54,7 @@ export default function Header() {
             {/* Contenido de texto */}
             <div className="space-y-6 text-center lg:text-left lg:pl-8 lg:border-l-4 border-primary/50">
               <motion.h1
-                className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-300"
+                className="text-3xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -68,7 +68,7 @@ export default function Header() {
               </motion.h1>
               
               <motion.p
-                className="text-xl md:text-2xl font-medium "
+                className="text-xl font-medium "
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -82,8 +82,8 @@ export default function Header() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
               >
-                <p className="text-lg flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <p className="text-xl flex items-center gap-2">
+                  <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                   Universidad Politécnica Salesiana
@@ -91,9 +91,22 @@ export default function Header() {
                 
                 <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                   <Button 
+                    onClick={() => window.location.href = "#projects"}
+                    variant="outline" 
+                    className="w-full rounded-full px-8 py-6 text-lg border-white/100 hover:bg-white/10"
+                  >
+                    <motion.span
+                      
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Ver Proyectos
+                    </motion.span>
+                  </Button>
+                  <Button 
                     asChild
                     variant="outline"
-                    className="rounded-full px-8 py-6 text-lg border-white/100 hover:bg-white/10"
+                    className="w-full rounded-full px-8 py-6 text-lg border-white/100 hover:bg-white/10"
                   >
                     <motion.a
                       href="#contacto"
@@ -104,19 +117,7 @@ export default function Header() {
                     </motion.a>
                   </Button>
                   
-                  <Button 
-                    onClick={() => window.location.href = "#projects"}
-                    variant="outline" 
-                    className="rounded-full px-8 py-6 text-lg border-white/100 hover:bg-white/10"
-                  >
-                    <motion.span
-                      
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Ver Proyectos
-                    </motion.span>
-                  </Button>
+                  
                 </div>
               </motion.div>
             </div>

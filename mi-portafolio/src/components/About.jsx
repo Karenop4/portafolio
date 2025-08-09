@@ -33,9 +33,12 @@ export default function About() {
     "p-4 md:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:shadow-[0_8px_30px_rgba(124,_58,_237,_0.15)] transition-shadow";
 
   return (
-    <section id="about" className="py-10 px-4 bg-gradient-to-b from-violet-900/20 to-indigo-900/20">
+    <section
+      id="about"
+      className="py-5 px-4 bg-gradient-to-b from-violet-900/20 to-indigo-900/20"
+    >
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
@@ -49,17 +52,14 @@ export default function About() {
           className="
             grid
             grid-cols-1
+            gap-6
             md:grid-cols-4
-            grid-rows-auto
             md:grid-rows-2
-            gap-3
-            auto-rows-auto
-            md:auto-rows-[1fr]
           "
         >
           {/* Descripción */}
           <Card
-            className={`${cardStyles} col-span-1 row-span-1 md:col-span-2 md:row-span-2 flex flex-col justify-center`}
+            className={`${cardStyles} col-span-1 md:col-span-2 md:row-span-2 flex flex-col justify-center`}
           >
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -144,14 +144,16 @@ export default function About() {
                 <Star className="text-yellow-400" size={24} />
                 <div>
                   <h4 className="font-semibold">Lema</h4>
-                  <p className="text-sm italic">“No es la herramienta la que hace al ingeniero, sino la pasión por crear soluciones.”</p>
+                  <p className="text-sm italic">
+                    “No es la herramienta la que hace al ingeniero, sino la pasión por crear soluciones.”
+                  </p>
                 </div>
               </motion.div>
             </div>
           </Card>
 
           {/* Formación complementaria */}
-          <Card className={`${cardStyles} col-span-1 md:col-span-2`}>
+          <Card className={`${cardStyles} col-span-1 md:col-span-2 md:row-span-1`}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -163,7 +165,7 @@ export default function About() {
               </h3>
               <p className="text-sm leading-relaxed  mb-8">
                 Cuento con <strong>certificaciones de Cisco en IoT y Mantenimiento de PCs</strong>.
-                Actualmente estoy inmersa en el mundo de los <strong>Sistemas Embebidos</strong>, expandiendo mis habilidades con entusiasmo.
+                Actualmente estoy inmersa en el mundo de la <strong>tecnología</strong>, expandiendo mis habilidades con entusiasmo.
               </p>
               <div className="flex gap-4">
                 <a
@@ -194,7 +196,7 @@ export default function About() {
           </Card>
 
           {/* Habilidades */}
-          <Card className={`${cardStyles} col-span-1 row-span-1`}>
+          <Card className={`${cardStyles} col-span-1 md:col-span-2 md:row-span-1`}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -206,29 +208,15 @@ export default function About() {
               </h3>
               <div className="grid grid-cols-2 gap-2">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center gap-2 text-sm bg-white/5 p-2 rounded">
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 text-sm bg-white/5 p-2 rounded"
+                  >
                     {skill.icon}
                     <span>{skill.name}</span>
                   </div>
                 ))}
               </div>
-            </motion.div>
-          </Card>
-
-          {/* Pasatiempos */}
-          <Card className={`${cardStyles} col-span-1 row-span-1`}>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-orange-400">
-                <Zap className="text-orange-400" /> Pasatiempos
-              </h3>
-              <p className="text-sm">
-               Disfruto cocinar y experimentar con nuevas recetas, así como mantenerme activa a través del deporte, en especial el baloncesto, un deporte que me motiva y fortalece.
-              </p>
             </motion.div>
           </Card>
         </div>

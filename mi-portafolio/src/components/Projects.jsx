@@ -20,12 +20,6 @@ export default function Projects() {
       imagen: "/assets/gestion_tareas.png"
     },
     {
-      titulo: "Web Analytics Dashboard",
-      descripcion: "Un sistema integral de análisis y visualización de datos para aplicaciones web que permite monitorear KPIs clave como engagement, conversión y comportamiento de usuarios. En progreso...",
-      link: "https://github.com/karen-dev/dashboard-ventas",
-      imagen: "/assets/proceso.png"
-    },
-    {
       titulo: "Portafolio Personal",
       descripcion: "Sitio web desarrollado con React, Tailwind y Shadcn/ui.",
       web:"https://portafolio-mocha-eta.vercel.app/",
@@ -48,7 +42,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="p-6 max-w-5xl mx-auto bg-card text-card-foreground rounded-xl shadow-lg mt-20 mb-8">
+    <section className="p-6 max-w-6xl mx-auto bg-card text-card-foreground rounded-xl shadow-lg mt-8 mb-8">
       <h2 id="projects" className="text-3xl font-semibold text-center mb-8">Proyectos</h2>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

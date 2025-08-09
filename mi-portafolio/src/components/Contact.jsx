@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
         id="contacto"
-        className="contact-hover p-6 max-w-4xl mx-auto w-full flex flex-col items-center shadow-sm shadow-zinc-700 mt-10 mb-8 transition-all duration-300 rounded-b-lg"
+        className="contact-hover p-6 max-w-6xl mx-auto w-full flex flex-col items-center shadow-sm shadow-zinc-700 mt-10 mb-8 transition-all duration-300 rounded-b-lg"
     >
     {/* Título centrado */}
       <h2 className="text-2xl font-semibold text-center mb-6">Contacto</h2>
