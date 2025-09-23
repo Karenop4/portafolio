@@ -1,6 +1,9 @@
 {
-  "build": {
-    "env": {},
-    "outputDirectory": ".next"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ]
 }
